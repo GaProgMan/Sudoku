@@ -3,6 +3,12 @@
 
 #include "Vector3d.h"
 
+/********************************************************************
+ * Vector3d class
+ *
+ * Used to represent a 3x3 matrix of integers. Each row of the Matrix
+ * is represented by a Vector3d object (containing 3 integers each).
+ ********************************************************************/
 
 class Matrix33d
 {

@@ -1,6 +1,12 @@
 #ifndef VECTOR3D_H
 #define VECTOR3D_H
 
+/********************************************************************
+ * Vector3d class
+ *
+ * Used to represent a 3 dimensional vector. Each value in the vector
+ * (known as X, Y and Z internally) is represented by an integer.
+ ********************************************************************/
 
 class Vector3d
 {
