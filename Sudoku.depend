@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1392566265 source:c:\users\gaprogman\codeprojects\sudoku\main.cpp
+	<iostream>
+	<iomanip>
+	"Matrix33d.h"
+
+1392566536 source:c:\users\gaprogman\codeprojects\sudoku\src\vector3d.cpp
+	"Vector3d.h"
+
+1392566392 c:\users\gaprogman\codeprojects\sudoku\include\vector3d.h
+
+1392566525 source:c:\users\gaprogman\codeprojects\sudoku\src\matrix33d.cpp
+	"Matrix33d.h"
+
+1392566343 c:\users\gaprogman\codeprojects\sudoku\include\matrix33d.h
+	"Vector3d.h"
+
