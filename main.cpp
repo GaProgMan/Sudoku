@@ -7,8 +7,6 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
-
     Matrix33d* myMatrix = new Matrix33d(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
     cout << "Matrix created" << endl;
