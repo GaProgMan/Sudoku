@@ -17,10 +17,16 @@ int main()
     cout << setw(5) << myMatrix->getRow2().xValue() <<  setw(5) << myMatrix->getRow2().yValue() <<  setw(5) << myMatrix->getRow2().zValue() << endl;
     cout << setw(5) << myMatrix->getRow3().xValue() <<  setw(5) << myMatrix->getRow3().yValue() <<  setw(5) << myMatrix->getRow3().zValue() << endl;
 
-    if(myMatrix->contains(10))
-        cout << "Matrix contains number value 10" << endl;
+    cout << "Enter a value to check the matrix against: ";
+
+    int inValueToCheck;
+
+    cin >> inValueToCheck;
+
+    if(myMatrix->contains(inValueToCheck))
+        cout << "Matrix contains number value " << inValueToCheck << endl;
     else
-        cout << "Matrix does not contain value 10" << endl;
+        cout << "Matrix does not contain value " << inValueToCheck << endl;
 
 
     char ch;
