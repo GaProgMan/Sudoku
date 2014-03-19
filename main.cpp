@@ -6,6 +6,9 @@
 using namespace std;
 
 // TODO:
+//      * Create an object (poss. called SudokuBoard) that
+//        represents the sudoku game board (abstraction of
+//        array of Martix33d objects).
 //      * Look into creating a GUI to display the Suddoku
 //        board object.
 
