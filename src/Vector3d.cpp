@@ -1,5 +1,9 @@
 #include "Vector3d.h"
 
+// TODO:
+//       * Implement a methos that gets where a particular value
+//         appears in the vector (returns x, y or z)
+
 /********************************************************************
  * Constructors and de-constructors
  ********************************************************************/
