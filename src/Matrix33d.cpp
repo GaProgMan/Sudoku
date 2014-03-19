@@ -23,14 +23,14 @@ Matrix33d::Matrix33d(int a11, int a12, int a13,
     row3 = Vector3d(a31, a32, a33);
 }
 
-Matrix33d::Matrix33d(const Vector3d& inRow1,
-                     const Vector3d& inRow2,
-                     const Vector3d& inRow3)
-{
-    this->row1 = inRow1;
-    this->row2 = inRow2;
-    this->row3 = inRow3;
-}
+//Matrix33d::Matrix33d(const Vector3d& inRow1,
+//                     const Vector3d& inRow2,
+//                     const Vector3d& inRow3)
+//{
+//    this->row1 = inRow1;
+//    this->row2 = inRow2;
+//    this->row3 = inRow3;
+//}
 
 const Vector3d& Matrix33d::getRow1() const{
 	return row1;

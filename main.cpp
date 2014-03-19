@@ -44,11 +44,19 @@ void displayMatrix(Matrix33d* inMatrixToDisplay)
     displayVector(inMatrixToDisplay->getRow3());
 }
 
+void displaySudokuBoard(Sudoku* inSudokuBoardToDisplay)
+{
+    displayMatrix(inSudokuBoardToDisplay->getTopRowLeft());
+    displayMatrix(inSudokuBoardToDisplay->getTopRowCentre());
+    displayMatrix(inSudokuBoardToDisplay->getTopRowLeft());
+}
+
 int main()
 {
     // Create a new instance of the matrix class
     // for testing with.
-    Matrix33d* myMatrix = new Matrix33d(1, 0, 3, 4, 5, 6, 0, 8, 9);
+    Matrix33d* ptr_myMatrix = new Matrix33d(1, 0, 3, 4, 5, 6, 0, 8, 9);
+    //Matrix33d* ptr_myMatrix = &myMatrix;
 
     cout << "Matrix created" << endl;
 
@@ -56,9 +64,14 @@ int main()
 //    cout << setw(5) << myMatrix->getRow2().xValue() <<  setw(5) << myMatrix->getRow2().yValue() <<  setw(5) << myMatrix->getRow2().zValue() << endl;
 //    cout << setw(5) << myMatrix->getRow3().xValue() <<  setw(5) << myMatrix->getRow3().yValue() <<  setw(5) << myMatrix->getRow3().zValue() << endl;
 
-    displayMatrix(myMatrix);
+    displayMatrix(ptr_myMatrix);
 
     // Create an exceptionally useful Sudoku object (sic)
+    Sudoku* ptr_SudokuBoard = new Sudoku(ptr_myMatrix, ptr_myMatrix, ptr_myMatrix, ptr_myMatrix, ptr_myMatrix, ptr_myMatrix, ptr_myMatrix, ptr_myMatrix, ptr_myMatrix);
+
+    cout << "Sudoku board created." << endl;
+
+    displaySudokuBoard(ptr_SudokuBoard);
 
 //    cout << "Enter a value to check the matrix against: ";
 //

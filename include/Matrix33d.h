@@ -20,9 +20,9 @@ class Matrix33d
                   int a21, int a22, int a23,
                   int a31, int a32, int a33);
 
-        Matrix33d(const Vector3d& inRow1,
-                  const Vector3d& inRow2,
-                  const Vector3d& inRow3);
+//        Matrix33d(const Vector3d& inRow1,
+//                  const Vector3d& inRow2,
+//                  const Vector3d& inRow3);
 
         const Vector3d& getRow1() const;
         const Vector3d& getRow2() const;
