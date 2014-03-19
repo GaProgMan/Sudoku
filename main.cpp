@@ -2,6 +2,7 @@
 #include <iomanip>
 
 #include "Matrix33d.h"
+#include "Sudoku.h"
 
 using namespace std;
 
@@ -36,18 +37,18 @@ void displayVector(Vector3d inVectorToDisplay)
 }
 
 // Used to output an entire matrix to the display
-void displayMatrix(Matrix33d* inMatrixToDisplay)
+void displayMatrix(const Matrix33d& inMatrixToDisplay)
 {
-    displayVector(inMatrixToDisplay->getRow1());
-    displayVector(inMatrixToDisplay->getRow2());
-    displayVector(inMatrixToDisplay->getRow3());
+    displayVector(inMatrixToDisplay.getRow1());
+    displayVector(inMatrixToDisplay.getRow2());
+    displayVector(inMatrixToDisplay.getRow3());
 }
 
 int main()
 {
     // Create a new instance of the matrix class
     // for testing with.
-    Matrix33d* myMatrix = new Matrix33d(1, 0, 3, 4, 5, 6, 0, 8, 9);
+    Matrix33d myMatrix = new Matrix33d(1, 0, 3, 4, 5, 6, 0, 8, 9);
 
     cout << "Matrix created" << endl;
 
