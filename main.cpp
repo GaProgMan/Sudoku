@@ -21,7 +21,6 @@ void displayVector(Vector3d inVectorToDisplay)
     else
         cout << ' ';
     cout << setw(5);
-        cout << setw(5);
         if (inVectorToDisplay.zValue() > 0)
         cout << inVectorToDisplay.zValue();
     else
