@@ -37,18 +37,18 @@ void displayVector(Vector3d inVectorToDisplay)
 }
 
 // Used to output an entire matrix to the display
-void displayMatrix(const Matrix33d& inMatrixToDisplay)
+void displayMatrix(Matrix33d* inMatrixToDisplay)
 {
-    displayVector(inMatrixToDisplay.getRow1());
-    displayVector(inMatrixToDisplay.getRow2());
-    displayVector(inMatrixToDisplay.getRow3());
+    displayVector(inMatrixToDisplay->getRow1());
+    displayVector(inMatrixToDisplay->getRow2());
+    displayVector(inMatrixToDisplay->getRow3());
 }
 
 int main()
 {
     // Create a new instance of the matrix class
     // for testing with.
-    Matrix33d myMatrix = new Matrix33d(1, 0, 3, 4, 5, 6, 0, 8, 9);
+    Matrix33d* myMatrix = new Matrix33d(1, 0, 3, 4, 5, 6, 0, 8, 9);
 
     cout << "Matrix created" << endl;
 
@@ -57,6 +57,8 @@ int main()
 //    cout << setw(5) << myMatrix->getRow3().xValue() <<  setw(5) << myMatrix->getRow3().yValue() <<  setw(5) << myMatrix->getRow3().zValue() << endl;
 
     displayMatrix(myMatrix);
+
+    // Create an exceptionally useful Sudoku object (sic)
 
 //    cout << "Enter a value to check the matrix against: ";
 //
