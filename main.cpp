@@ -5,6 +5,10 @@
 
 using namespace std;
 
+// TODO:
+//      * Look into creating a GUI to display the Suddoku
+//        board object.
+
 // Used to output a single vector to the display.
 // If and x, y or z value is equal to 0, we show
 // a blank string in it's place
