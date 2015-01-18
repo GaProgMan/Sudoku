@@ -16,11 +16,13 @@
     <File Name="src/Matrix.c"/>
     <File Name="src/SudokuBoard.c"/>
     <File Name="src/Vector3d.c"/>
+    <File Name="src/Game.c"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="include/Vector3d.h"/>
     <File Name="include/Matrix.h"/>
     <File Name="include/SudokuBoard.h"/>
+    <File Name="include/Game.h"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

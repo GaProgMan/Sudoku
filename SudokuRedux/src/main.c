@@ -12,6 +12,7 @@
 #include "include/Vector3d.h"
 #include "include/Matrix.h"
 #include "include/SudokuBoard.h"
+#include "include/Game.h"
 
 
 int main(int argc, char **argv) {

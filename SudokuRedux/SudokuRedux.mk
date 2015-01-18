@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/Applications/codelite.app/Contents/SharedSupport/
-Objects0=$(IntermediateDirectory)/src_main.c$(ObjectSuffix) $(IntermediateDirectory)/src_Matrix.c$(ObjectSuffix) $(IntermediateDirectory)/src_SudokuBoard.c$(ObjectSuffix) $(IntermediateDirectory)/src_Vector3d.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_main.c$(ObjectSuffix) $(IntermediateDirectory)/src_Matrix.c$(ObjectSuffix) $(IntermediateDirectory)/src_SudokuBoard.c$(ObjectSuffix) $(IntermediateDirectory)/src_Vector3d.c$(ObjectSuffix) $(IntermediateDirectory)/src_Game.c$(ObjectSuffix) 
 
 
 
@@ -118,6 +118,14 @@ $(IntermediateDirectory)/src_Vector3d.c$(DependSuffix): src/Vector3d.c
 
 $(IntermediateDirectory)/src_Vector3d.c$(PreprocessSuffix): src/Vector3d.c
 	@$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Vector3d.c$(PreprocessSuffix) "src/Vector3d.c"
+
+$(IntermediateDirectory)/src_Game.c$(ObjectSuffix): src/Game.c $(IntermediateDirectory)/src_Game.c$(DependSuffix)
+	$(CC) $(SourceSwitch) "/Users/jamietaylor/Code Projects/Sudoku/SudokuRedux/src/Game.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Game.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Game.c$(DependSuffix): src/Game.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Game.c$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Game.c$(DependSuffix) -MM "src/Game.c"
+
+$(IntermediateDirectory)/src_Game.c$(PreprocessSuffix): src/Game.c
+	@$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Game.c$(PreprocessSuffix) "src/Game.c"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
