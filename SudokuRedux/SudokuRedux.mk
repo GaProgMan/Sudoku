@@ -5,8 +5,8 @@
 ## Debug
 ProjectName            :=SudokuRedux
 ConfigurationName      :=Debug
-WorkspacePath          := "/Users/jamietaylor/Code Projects/SudokuRedux"
-ProjectPath            := "/Users/jamietaylor/Code Projects/SudokuRedux"
+WorkspacePath          := "/Users/jamietaylor/Code Projects/Sudoku/SudokuRedux"
+ProjectPath            := "/Users/jamietaylor/Code Projects/Sudoku/SudokuRedux"
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
@@ -88,7 +88,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.c$(ObjectSuffix): main.c $(IntermediateDirectory)/main.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "/Users/jamietaylor/Code Projects/SudokuRedux/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "/Users/jamietaylor/Code Projects/Sudoku/SudokuRedux/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.c$(DependSuffix): main.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM "main.c"
 
@@ -96,7 +96,7 @@ $(IntermediateDirectory)/main.c$(PreprocessSuffix): main.c
 	@$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.c$(PreprocessSuffix) "main.c"
 
 $(IntermediateDirectory)/include_Vector3d.c$(ObjectSuffix): include/Vector3d.c $(IntermediateDirectory)/include_Vector3d.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "/Users/jamietaylor/Code Projects/SudokuRedux/include/Vector3d.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/include_Vector3d.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "/Users/jamietaylor/Code Projects/Sudoku/SudokuRedux/include/Vector3d.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/include_Vector3d.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/include_Vector3d.c$(DependSuffix): include/Vector3d.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/include_Vector3d.c$(ObjectSuffix) -MF$(IntermediateDirectory)/include_Vector3d.c$(DependSuffix) -MM "include/Vector3d.c"
 
@@ -104,7 +104,7 @@ $(IntermediateDirectory)/include_Vector3d.c$(PreprocessSuffix): include/Vector3d
 	@$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/include_Vector3d.c$(PreprocessSuffix) "include/Vector3d.c"
 
 $(IntermediateDirectory)/include_Matrix.c$(ObjectSuffix): include/Matrix.c $(IntermediateDirectory)/include_Matrix.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "/Users/jamietaylor/Code Projects/SudokuRedux/include/Matrix.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/include_Matrix.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "/Users/jamietaylor/Code Projects/Sudoku/SudokuRedux/include/Matrix.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/include_Matrix.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/include_Matrix.c$(DependSuffix): include/Matrix.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/include_Matrix.c$(ObjectSuffix) -MF$(IntermediateDirectory)/include_Matrix.c$(DependSuffix) -MM "include/Matrix.c"
 
@@ -112,7 +112,7 @@ $(IntermediateDirectory)/include_Matrix.c$(PreprocessSuffix): include/Matrix.c
 	@$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/include_Matrix.c$(PreprocessSuffix) "include/Matrix.c"
 
 $(IntermediateDirectory)/include_SudokuBoard.c$(ObjectSuffix): include/SudokuBoard.c $(IntermediateDirectory)/include_SudokuBoard.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "/Users/jamietaylor/Code Projects/SudokuRedux/include/SudokuBoard.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/include_SudokuBoard.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "/Users/jamietaylor/Code Projects/Sudoku/SudokuRedux/include/SudokuBoard.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/include_SudokuBoard.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/include_SudokuBoard.c$(DependSuffix): include/SudokuBoard.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/include_SudokuBoard.c$(ObjectSuffix) -MF$(IntermediateDirectory)/include_SudokuBoard.c$(DependSuffix) -MM "include/SudokuBoard.c"
 

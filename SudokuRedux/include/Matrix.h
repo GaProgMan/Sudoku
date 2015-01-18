@@ -17,12 +17,24 @@ typedef struct{
 } Matrix3d;
 
 /**
- * @brief Creates and initialises a new instance of the Matrix3d struct and returns a pointer to it
+ * @brief Creates and initialises a new instance of the Matrix3d struct
  * @param firstRow The vector which represents the first row of the matrix
  * @param secondRow The vector which represents the second row of the matrix
- * @param thirdRow The vector which represents the third row of the matrix
+ * @param thirdRow The vector which represents the thrid row of the matrix
  * @return A pointer to the new instance of the Matrix3d struct
  */
 Matrix3d* NewMatrix (Vector3d* firstRow, Vector3d* secondRow, Vector3d* thirdRow);
+
+/**
+ * @brief Used to destroy an instance of the Matrix3d struct
+ * @param toDestroy The instance to free
+ */
+void DestroyMatrix(Matrix3d* toDestroy);
+
+/**
+ * @brief Used to create and initialise a new instance of the Matrix3d struct
+ * @return A pointer to the new Matrix3d* instance
+ */
+Matrix3d* CreateMatrix();
 
 #endif // MATRIX_H

@@ -8,9 +8,6 @@
 #ifndef VECTOR3D_H
 #define VECTOR3D_H
 
-/// Vector 3d is made of three unsigned chars. This type was chosen for
-// it's size (1 byte) and the range it supports (no signed values are
-// required in Sudoku)
 typedef struct{
 	unsigned char _x;
 	unsigned char _y;
@@ -18,12 +15,24 @@ typedef struct{
 } Vector3d;
 
 /**
- * @brief Creates and initialises a new instance of the Vector3d struct and returns a pointer to it
- * @param xValue the X value for the Vector
- * @param yValue the Y value for the vector
- * @param zValue the Z value for the vector
- * @return A pointer to the Vector3d instance
+ * @brief Creates and instantiates a new instance of the Vector3d struct
+ * @param xValue The X value to use
+ * @param yValue The Y value to use
+ * @param zValue The Z value to use
+ * @return A pointer to the new instance of the Vector3d struct
  */
 Vector3d* NewVector(char xValue, char yValue, char zValue);
+
+/**
+ * @brief Used to destroy an instance of the Vector3d struct
+ * @param toDestroy The instance to free
+ */
+void DestroyVector(Vector3d* toDestroy);
+
+/**
+ * @brief Used to create and initialise a new instance of the Vector3d struct with random data
+ * @return A pointer to the new Vector3d* instance
+ */
+Vector3d* CreateVector();
 
 #endif // VECTOR3D_H

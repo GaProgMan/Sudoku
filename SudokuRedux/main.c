@@ -7,40 +7,22 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 #include "include/Vector3d.h"
 #include "include/Matrix.h"
 #include "include/SudokuBoard.h"
 
-/**
- * @brief Creates and initialises a new instance of the SudokuBoard struct
- * @return A pointer to the newly created SudokuBoard struct
- */
-SudokuBoard* createGameBoard(){
-	// Create instances of the Vector3d, Matrix3d and SudokuBoard structs
-	Vector3d* myVector = NewVector(1, 2, 3);
-	Matrix3d* myMatrix = NewMatrix(myVector, myVector, myVector);
-	SudokuBoard* myBoard = NewSudokuBoard(
-						myMatrix, myMatrix, myMatrix,
-						myMatrix, myMatrix, myMatrix,
-						myMatrix, myMatrix, myMatrix);
-						
-	return myBoard;
-}
-
-/**
- * @brief Destroys the SudokuBaord which is passed via parameter
- * @param myBoard The board to destroy
- */
-void destroyBoard(SudokuBoard* myBoard) {
-	free(myBoard);
-}
 
 int main(int argc, char **argv) {
-	SudokuBoard* myBoard = createGameBoard();
-	destroyBoard(myBoard);
-	myBoard = NULL;
+	// initialise a random number generator - used for
+	// generating "random" data
+	srand((unsigned)time(NULL));
 	
-	printf("hello world\n");
+	printf("building board\n");
+	SudokuBoard* myBoard = createGameBoard();
+	
+	printf("destroying board\n");
+	DestroyBoard(myBoard);
 	return 0;
 }
