@@ -7,3 +7,8 @@
 
 #include <stdlib.h>
 #include "include/Game.h"
+
+// To do:
+//		Get code for curent time
+//		Used code for current time to calculate how long game has been running
+//		Pass pointer to instance of SudokuBoard to method which starts game
